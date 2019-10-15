@@ -1,0 +1,59 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary navbar-center">
+    <a class="navbar-brand" href="/">AT3010 Model Viewer</a>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav mr-auto navbar-fill">
+            <li class="nav-item dropdown">
+                <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="seriesDropdownLbl"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                >
+                    Select Series:
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="seriesDropdown">
+                    <% series.forEach(series => { %>
+                    <a class="dropdown-item" href="#"><%=series%></a>
+                    <%});%>
+                </div>
+            </li>
+        </ul>
+        <ul class="navbar-nav mr-auto navbar-fill">
+            <li class="nav-item dropdown">
+                <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="modelDropdownLbl"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                >
+                    Select Model:
+                </a>
+                <div
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdown"
+                    id="modelDropdown"
+                ></div>
+            </li>
+        </ul>
+    </div>
+    <div style="display: inline-block">
+        <button type="button" class="btn btn-danger" id="badBtn">
+            Bad: <span class="badge" id="badLbl">X</span>
+        </button>
+        <button type="button" class="btn btn-success" id="goodBtn">
+            Good: <span class="badge" id="goodLbl">X</span>
+        </button>
+        <button type="button" class="btn btn-info" id="partBtn">
+            Part Edge: <span class="badge" id="partLbl">X</span>
+        </button>
+        <button type="button" class="btn btn-default" id="trayBtn">
+            Tray: <span class="badge" id="trayLbl">X</span>
+        </button>
+    </div>
+</nav>
